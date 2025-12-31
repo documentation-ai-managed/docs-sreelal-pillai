@@ -1,0 +1,119 @@
+---
+title: Getting Started
+description: Quickly set up your account and create your first documentation space to begin managing projects.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+<Callout kind="info">
+
+- A modern web browser (Chrome, Firefox, Safari, or Edge)
+- An email address for account verification
+- Optional: Node.js `{>=18}` for CLI usage
+
+</Callout>
+
+## Create Your Account
+
+Sign up for Sreelal Pillai in under 2 minutes.
+
+<Steps>
+  <Step title="Visit Dashboard" icon="globe">
+    Navigate to the [Sreelal Pillai dashboard](https://dashboard.example.com/signup).
+  </Step>
+  <Step title="Enter Details" icon="user">
+    Provide your email, full name, and a secure password. Accept the terms of service.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification link from `no-reply@example.com` and click to confirm.
+  </Step>
+  <Step title="Complete Onboarding" icon="check-circle">
+    Set your workspace name and primary brand color (default: `#3B82F6`).
+  </Step>
+</Steps>
+
+## Set Up Your Workspace
+
+Workspaces organize your documentation projects. Create one to get started.
+
+<Tabs>
+  <Tab title="UI Method" icon="mouse-pointer">
+    <Steps>
+      <Step title="New Workspace" icon="plus">
+        From the dashboard, click **New Workspace**.
+      </Step>
+      <Step title="Configure" icon="settings">
+        Enter a name like `My Project Docs` and select your brand color.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="CLI Method" icon="terminal">
+    Install the CLI and create a workspace programmatically.
+
+    <CodeGroup tabs="npm,yarn">
+```bash
+npm install -g @sreelalpillai/cli
+```
+```bash
+yarn global add @sreelalpillai/cli
+```
+    </CodeGroup>
+
+````bash
+sreelal workspace create "My Project Docs" --color "#3B82F6"
+````
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+
+Save your API key from the workspace settings. You'll need it for integrations.
+
+</Callout>
+
+## Create Your First Project
+
+Add your initial documentation space.
+
+<Steps>
+  <Step title="New Project" icon="folder-plus">
+    In your workspace, select **New Project** and name it `Getting Started Guide`.
+  </Step>
+  <Step title="Add Content" icon="file-text">
+    Upload MDX files or use the editor to create your first page.
+  </Step>
+  <Step title="Publish" icon="upload-cloud">
+    Click **Publish** to generate a live URL like `https://docs.example.com/my-project`.
+  </Step>
+</Steps>
+
+## Interface Tour
+
+Explore the main sections of Sreelal Pillai.
+
+<Columns cols={3}>
+  <Card title="Editor" icon="edit-3" href="#editor">
+    Write and preview MDX docs with live rendering.
+  </Card>
+  <Card title="Projects" icon="layers" href="#projects">
+    Manage multiple doc spaces and versions.
+  </Card>
+  <Card title="Settings" icon="settings" href="#settings">
+    Customize themes, integrations, and API access.
+  </Card>
+</Columns>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your API with tokens and webhooks.
+  </Card>
+  <Card title="Advanced Features" icon="sparkles" href="/configuration">
+    Dive into custom components and workflows.
+  </Card>
+</Columns>
+
+Congratulations! You now have a fully functional documentation space. Explore the [full docs](/introduction) for more.

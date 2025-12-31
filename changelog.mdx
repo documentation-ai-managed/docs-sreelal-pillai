@@ -1,0 +1,114 @@
+---
+title: Changelog
+description: Review the version history of Sreelal Pillai, including recent updates and improvements.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  You receive notifications for new releases via email or the dashboard at `https://dashboard.example.com/notifications`. Check this changelog regularly to stay informed about enhancements, bug fixes, and breaking changes.
+</Callout>
+
+Stay current with the latest improvements to Sreelal Pillai. Review the key changes below, organized by release version.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration for shared documentation spaces, allowing multiple users to edit pages simultaneously.
+- Introduced custom brand color support—set your theme with `{ brandColor: '#3B82F6' }` in project settings.
+
+## Improvements
+
+- Enhanced search functionality with fuzzy matching and syntax highlighting for code blocks.
+- Optimized page load times by `{<25%}` through lazy-loading components.
+
+## Bug Fixes
+
+- Fixed parsing errors in MDX frontmatter when using special characters like `{` and `}`.
+- Resolved issues with nested code blocks not rendering correctly inside `<Tabs>` and `<Steps>`.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["bugfix", "security"]}>
+
+## Security Updates
+
+- Patched potential XSS vulnerabilities in user-generated content rendering.
+
+## Bug Fixes
+
+- Corrected `ParamField` component validation for `path`, `query`, `header`, and `body` attributes—now enforces exactly one location type.
+- Fixed `Update` component tags rendering when using arrays like `{["feature", "breaking"]}`.
+
+## Improvements
+
+- Added keyboard navigation support for `<ExpandableGroup>` and `<Tabs>` components.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## Initial Release
+
+- Core MDX documentation engine with support for 15+ components including `<Callout>`, `<Steps>`, `<CodeGroup>`, and `<Update>`.
+- Full YAML frontmatter parsing with automatic title and description extraction.
+- Integrated Lucide icons for all components—over 200 available options like `book-open` and `zap`.
+
+## Breaking Changes
+
+- Removed legacy `<Mermaid>` JSX component; use standard ````mermaid```` code blocks instead.
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to update your Sreelal Pillai instance to the latest version.
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+
+    Create a full backup of your documentation space.
+
+    ```
+    tar -czf docs-backup-$(date +%Y%m%d).tar.gz /path/to/docs
+    ```
+
+  </Step>
+  <Step title="Update Package" icon="download">
+    <CodeGroup tabs="npm,yarn">
+      ```bash
+      npm install sreelal-pillai@latest
+      ```
+      ```bash
+      yarn add sreelal-pillai@latest
+      ```
+    </CodeGroup>
+  </Step>
+  <Step title="Run Migrations" icon="settings">
+    ```
+    npx sreelal-pillai migrate
+    ```
+  </Step>
+  <Step title="Restart Server" icon="refresh-cw">
+    Restart your application server to apply changes.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  After upgrading, verify your pages parse correctly by checking for errors in `<` and `>` characters—always wrap them in backticks like `<Component>`.
+</Callout>
+
+## Quick Links
+
+<Columns cols={3}>
+  <Card title="Introduction" icon="book-open" href="/introduction">
+    Get started with Sreelal Pillai fundamentals.
+  </Card>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Set up your first documentation site.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs with API keys.
+  </Card>
+</Columns>

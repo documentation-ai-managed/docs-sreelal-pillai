@@ -1,0 +1,134 @@
+---
+title: Core Features
+description: Explore the main capabilities of Sreelal Pillai for efficient documentation organization and project management.
+---
+
+## Overview
+
+Sreelal Pillai provides powerful tools to structure your documentation, collaborate with teams, search content efficiently, and embed media seamlessly. You organize projects into hierarchical spaces, invite contributors, filter documents by tags, and attach images or videos directly.
+
+<Columns cols={3}>
+  <Card title="Document Structuring" icon="book-open" href="#document-structuring">
+    Build nested pages and sections effortlessly.
+  </Card>
+  <Card title="Project Collaboration" icon="users" href="#project-collaboration">
+    Share and co-edit in real time.
+  </Card>
+  <Card title="Search & Filtering" icon="search" href="#search-filtering">
+    Find content with advanced queries.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Start by creating a new project space to unlock these features.
+</Callout>
+
+## Document Structuring Tools
+
+You create hierarchical documentation using folders, pages, and subpages. Drag and drop to reorganize, or use the outline view for navigation.
+
+<Tabs>
+  <Tab title="Folders" icon="folder">
+    Organize into parent-child structures.
+    
+    ```javascript
+    // Example API call to create a folder
+    await fetch('https://api.example.com/v1/folders', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer YOUR_API_KEY' },
+      body: JSON.stringify({
+        name: 'API Reference',
+        parentId: 'proj_123'
+      })
+    });
+    ```
+  </Tab>
+  <Tab title="Pages" icon="file-text">
+    Add rich MDX pages with components.
+    
+    ```mdx
+    ## API Endpoints
+    
+    <ParamField path="id" param-type="string" required="true">
+      Document ID.
+    </ParamField>
+    ```
+  </Tab>
+</Tabs>
+
+## Project Collaboration Options
+
+Invite team members and set permissions. You enable real-time editing, comments, and version history.
+
+<Steps>
+  <Step title="Invite Collaborators" icon="user-plus">
+    Go to project settings and add emails.
+  </Step>
+  <Step title="Set Permissions" icon="shield">
+    Choose roles: admin, editor, viewer.
+  </Step>
+  <Step title="Enable Comments" icon="message-circle">
+    Toggle comments on any page.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+  // Share project via API
+  const share = await fetch('https://api.example.com/v1/projects/proj_123/shares', {
+    method: 'POST',
+    body: JSON.stringify({ email: 'user@example.com', role: 'editor' })
+  });
+  ```
+  ```python
+  # Share project via API
+  import requests
+  response = requests.post(
+      'https://api.example.com/v1/projects/proj_123/shares',
+      json={'email': 'user@example.com', 'role': 'editor'},
+      headers={'Authorization': 'Bearer YOUR_API_KEY'}
+  )
+  ```
+</CodeGroup>
+
+## Search and Filtering Functions
+
+You search across all projects using full-text queries, tags, and filters. Results update in real time.
+
+| Filter Type | Description | Example |
+|-------------|-------------|---------|
+| Tags | Filter by labels | `tag:api` |
+| Date | Recent changes | `updated>2024-01-01` |
+| Author | By contributor | `author:john@example.com` |
+
+<Expandable title="Advanced Search Queries" default-open="false">
+  Combine filters like `tag:docs AND updated>2024-01-01`.
+</Expandable>
+
+## Media and Attachment Support
+
+Embed images, videos, and files directly. You upload via drag-and-drop or API.
+
+```javascript
+// Upload media example
+const formData = new FormData();
+formData.append('file', imageFile);
+formData.append('projectId', 'proj_123');
+
+await fetch('https://api.example.com/v1/media', {
+  method: 'POST',
+  headers: { 'Authorization': 'Bearer YOUR_API_KEY' },
+  body: formData
+});
+```
+
+<Image
+  src="https://via.placeholder.com/800x400/3B82F6/ffffff?text=Embedded+Image"
+  alt="Sample embedded image in documentation"
+  width="800"
+  height="400"
+/>
+
+<Callout kind="success">
+  All features integrate seamlessly for scalable documentation workflows.
+</Callout>

@@ -1,0 +1,106 @@
+---
+title: Introduction to Sreelal Pillai
+description: Welcome to Sreelal Pillai, your default documentation space for organizing and managing project documentation with ease.
+---
+
+## Overview
+
+Sreelal Pillai provides a centralized space to create, organize, and manage your project documentation. You can build structured docs, collaborate with teams, and publish updates seamlessly. This platform supports Markdown, custom components, and version control integration for efficient documentation workflows.
+
+<Callout kind="info">
+Start by creating your first document and explore the intuitive editor.
+</Callout>
+
+## Key Features
+
+Sreelal Pillai offers powerful tools to streamline your documentation process.
+
+<Columns cols={3}>
+  <Card title="Intuitive Editor" icon="edit-3" href="#editor">
+    Write in Markdown with live previews and rich components like cards and tabs.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Integrate with GitHub for seamless commits, branches, and pull requests.
+  </Card>
+  <Card title="Custom Components" icon="puzzle" href="#components">
+    Use pre-built MDX components for interactive docs, code examples, and diagrams.
+  </Card>
+</Columns>
+
+## Benefits of Using Sreelal Pillai
+
+You gain full control over your documentation without complex setups. Benefits include:
+
+- **Rapid Onboarding**: New team members find information quickly through searchable, structured pages.
+- **Collaboration**: Multiple users edit simultaneously with real-time previews.
+- **Scalability**: Handle projects of any size with folders, tags, and navigation menus.
+- **Customization**: Apply your brand color (`#3B82F6`) and tailor layouts to match your style.
+
+<Callout kind="tip">
+Benefits scale with usage—start small and expand as your projects grow.
+</Callout>
+
+## Quick Start
+
+Get up and running in minutes.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up at `https://dashboard.example.com/register` with your email.
+  </Step>
+  <Step title="Set Up Space" icon="settings">
+    Create a new documentation space and configure your brand color to `#3B82F6`.
+  </Step>
+  <Step title="Add First Doc" icon="file-plus">
+    Use the editor to write your first page. Here's a sample API call to create a document:
+
+    <CodeGroup tabs="JavaScript,cURL">
+      ```javascript
+      const response = await fetch('https://api.example.com/v1/docs', {
+        method: 'POST',
+        headers: { 'Authorization': 'Bearer YOUR_API_KEY', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          title: 'My First Doc',
+          content: '# Hello World\nWelcome to Sreelal Pillai.'
+        })
+      });
+      ```
+      ```bash
+      curl -X POST https://api.example.com/v1/docs \
+        -H "Authorization: Bearer YOUR_API_KEY" \
+        -H "Content-Type: application/json" \
+        -d '{
+          "title": "My First Doc",
+          "content": "# Hello World\nWelcome to Sreelal Pillai."
+        }'
+      ```
+    </CodeGroup>
+  </Step>
+  <Step title="Publish" icon="globe">
+    Preview and publish your space to share with your team.
+  </Step>
+</Steps>
+
+## Navigation Guide
+
+Explore key sections tailored to your needs.
+
+<Tabs>
+  <Tab title="Beginners" icon="user">
+    Start with [Quickstart](/quickstart) for setup, then [Authentication](/authentication) for secure access.
+  </Tab>
+  <Tab title="Developers" icon="code">
+    Dive into [API Reference](/api) and [Configuration](/configuration) for advanced integrations.
+  </Tab>
+  <Tab title="Admins" icon="shield">
+    Manage users via [Admin Guide](/admin) and review [Changelog](/changelog).
+  </Tab>
+</Tabs>
+
+<Expandable title="Need Help?" default-open="false">
+  Visit the [Help Center](/help-center) or contact support. Common issues include API key setup—ensure you use `YOUR_API_KEY` as a placeholder initially.
+</Expandable>
+
+<Callout kind="success">
+Ready to begin? Follow the Quick Start steps above and build your first document today.
+</Callout>
